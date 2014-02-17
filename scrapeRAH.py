@@ -1,15 +1,15 @@
 '''
-Created 9/25/2012 by Cameron Blevins
 Program to scrape reviews from a specific issue of Reviews in American History.
 Note: requires browser access to Project MUSE
+Created 9/25/2012 by Cameron Blevins
 '''
 
 import os, urllib2, urllib, re
 
 def main():
-    volume="41"
-    issue = "2"
-    volumeIssue = volume+"."+issue
+    volume="41" #change volume number
+    issue = "2" #change issue number
+    volumeIssue = volume+"."+issue #concatenate vol and issue for a URL
         #make a directory for the volume you want to download
     newFolder=os.getcwd()+'/'+volumeIssue
     if volumeIssue not in os.listdir(os.getcwd()):
